@@ -1,13 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;;
+}
+.background {
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+}
+.App{
+  min-height:100vh;
+  padding: 40px;
+}
+
+/* ---------------Heading Section--------------- */
+.heading{
+  width: 100%;
+  padding-bottom: 40px;
+}
+.heading>p{
+  padding: 16px;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #f8fafc;
+}
+
+/* ---------------Random Section--------------- */
+.section{
+  padding: 16px 0;
+  border-radius: 16px;
+  width: 50%;
+  margin: 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid gray;
+}
+.section>img{
+  margin: 16px 0;
+  max-width: 80%;
+}
+.random-section{
+  background-color: #4ade80;
+  margin-bottom: 40px;
+}
+.search-section{
+  background-color: #60a5fa;
+}
+.title{
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 5%;
+}
+.generate-button{
+  margin: 8px 0;
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 500;
+  background-color: #ffffff70;
+  border-radius: 8px;
+  text-transform: uppercase;
+  width: 80%;
+  cursor: pointer;
+}
+.generate-button:hover{
+  background-color: white;
+}
+/* ---------------Search Section--------------- */
+
+.search-section>input{
+  padding: 8px 12px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  width: 80%;
+}
+.search-section>input:active{
+  border: none;
+}
+.search-section>input:focus{
+  border: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
+
+
+/* ---------------Spinner--------------- */
+.spinner {
+  margin: 40px;
+  width: 11.2px;
+  height: 11.2px;
+  animation: spinner-z355kx 1s infinite linear;
+  border-radius: 11.2px;
+  box-shadow: 28px 0px 0 0 #fff, 17.4px 21.8px 0 0 #fff, -6.2px 27.2px 0 0 #fff, -25.2px 12px 0 0 #fff, -25.2px -12px 0 0 #fff, -6.2px -27.2px 0 0 #fff, 17.4px -21.8px 0 0 #fff;
+}
+
+@keyframes spinner-z355kx {
+  to {
+     transform: rotate(360deg);
+  }
+}
+
+
+  /* ---------------Media Query--------------- */
+  @media (max-width: 768px) {
+    .section{
+      width: 90%;
+      margin: 0 5% 10%;
+    }
+  }
+  @media (min-width:769px) and (max-width: 1080px) {
+    .section{
+      width: 70%;
+      margin: 0 15% 10%;
+    }
+  }
