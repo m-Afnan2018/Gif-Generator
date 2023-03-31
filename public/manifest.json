@@ -38,26 +38,11 @@
       "sizes": "512x512"
     }
   ],
-  "shortcuts" : [
-    {
-      "name": "Today's agenda",
-      "url": "/today",
-      "description": "List of events planned for today"
-    },
-    {
-      "name": "New event",
-      "url": "/create/event"
-    },
-    {
-      "name": "New reminder",
-      "url": "/create/reminder"
-    }
-  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#2A2727",
-  "description":"This is app let you generate random as well as searched gifs",
+  "description":"This is app let you generate random as well as searched gifs.",
   "scope":"/",
   "orientation": "portrait-primary"
 }

@@ -1,7 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import { API_KEY, URL } from '../apis'
-import axios from 'axios';
+import { useState } from 'react';
 import useGif from '../hooks/useGif';
 
 const Search = () => {
@@ -20,7 +18,7 @@ const Search = () => {
   return (
     <div className='search-section section'>
         <div className='title'>random {search} gif</div>
-        {loader ? (<div className='spinner'></div>) : (<img src={gif}></img>)}        
+        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF'></img>)}        
         <input type="text" onChange={inputHandler}  onKeyDown={(btn) => {btn.key==='Enter' && generateHandler()}}></input>
         <div className='generate-button' onClick={generateHandler}>generate</div>
     </div>

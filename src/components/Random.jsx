@@ -1,6 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { API_KEY, URL } from '../apis'
+import React from 'react'
 import useGif from '../hooks/useGif';
 
 const Random = () => {
@@ -14,7 +12,7 @@ const Random = () => {
   return (
     <div className='random-section section'>
         <div className='title'>a random gif</div>
-        {loader ? (<div className='spinner'></div>) : (<img src={gif}></img>)}
+        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF'></img>)}
         <div className='generate-button' onClick={generateHandler}>generate</div>
     </div>
   )
