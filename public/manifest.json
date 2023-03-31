@@ -41,7 +41,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#2A2727",
+  "background_color": "#b1d2ff",
   "description":"This is app let you generate random as well as searched gifs.",
   "scope":"/",
   "orientation": "portrait-primary"
