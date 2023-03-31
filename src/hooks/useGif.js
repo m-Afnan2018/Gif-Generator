@@ -12,7 +12,7 @@ const useGif = (tag) => {
 
   async function generate(){
     setLoader(true);
-    const url = tag ? random_URL : `${random_URL}&tag=${tag}`;
+    const url = tag ? `${random_URL}&tag=${tag}` : random_URL;
     const {data} = await axios.get(url);
     let gifUrl = data.data.images.downsized_large.url;
     setGif(gifUrl);
