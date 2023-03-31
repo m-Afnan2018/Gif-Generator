@@ -4,7 +4,6 @@ import axios from 'axios';
 const key = process.env.REACT_APP_GIF_API_KEY;
 const URL = process.env.REACT_APP_URL;
 const random_URL = `${URL}?api_key=${key}`;
-// const search_URL = `${URL}?api_key=${key}&tag=${search}`;
 
 const useGif = (tag) => {
   const [gif, setGif] = useState(null);
