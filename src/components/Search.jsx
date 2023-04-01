@@ -18,7 +18,7 @@ const Search = () => {
   return (
     <div className='search-section section'>
         <div className='title'>random {search} gif</div>
-        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF'></img>)}
+        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF' loading='lazy'></img>)}
         <div className='download-share'>
           <div className={loader ? "button disable" : "button"} onClick={downloadHandler}>download</div>
           {

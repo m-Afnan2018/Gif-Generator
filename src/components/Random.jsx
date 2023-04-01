@@ -12,7 +12,7 @@ const Random = () => {
   return (
     <div className='random-section section'>
         <div className='title'>a random gif</div>
-        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF'></img>)}
+        {loader ? (<div className='spinner'></div>) : (<img src={gif} alt='GIF' loading='lazy'></img>)}
         <div className='generate-button' onClick={generateHandler}>generate</div>
     </div>
   )
