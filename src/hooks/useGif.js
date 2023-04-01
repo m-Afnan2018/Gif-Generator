@@ -46,6 +46,7 @@ const useGif = (tag) => {
   }
 
   async function checkShareSupport(){
+    /* eslint-disable  no-unused-vars */
     const rawImage = await fetch(gif);
     const blobImage = await rawImage.blob();
     
