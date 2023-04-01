@@ -28,6 +28,11 @@
       "sizes": "128x128"
     },
     {
+      "src": "256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
       "src": "512x512.png",
       "type": "image/png",
       "sizes": "512x512"
@@ -71,6 +76,11 @@
       "src": "favicon.svg",
       "type": "image/svg+xml",
       "sizes": "180x180"
+    },
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     }
   ],
   "start_url": ".",

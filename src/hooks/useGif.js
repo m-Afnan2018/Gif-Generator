@@ -8,7 +8,7 @@ const random_URL = `${URL}?api_key=${key}`;
 const useGif = (tag) => {
   const [gif, setGif] = useState(null);
   const [loader, setLoader] = useState(false);
-  const [shareSupport, setShareSupport] = useState(true);
+  const [shareSupport, setShareSupport] = useState(false);
   const [shareURL, setShareURL] = useState(null);
 
   async function generate(){
@@ -28,7 +28,7 @@ const useGif = (tag) => {
 
   useEffect(() => {
     generate();
-    checkShareSupport();
+    // checkShareSupport();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
@@ -62,7 +62,7 @@ const useGif = (tag) => {
       files: [file],
     }
     if(navigator.canShare && navigator.canShare(shareData)){
-      setShareSupport(false);
+      setShareSupport(true);
     }
     else{
       setShareSupport(false);
