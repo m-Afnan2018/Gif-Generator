@@ -9,11 +9,13 @@ const useGif = (tag) => {
   const [gif, setGif] = useState(null);
   const [loader, setLoader] = useState(false);
   const [shareSupport, setShareSupport] = useState(true);
+  const [shareURL, setShareURL] = useState(null);
 
   async function generate(){
     setLoader(true);
     const url = tag ? `${random_URL}&tag=${tag}` : random_URL;
     const {data} = await axios.get(url);
+    setShareURL(data?.data?.images.downsized_large?.url);
     if(data?.data?.images){
       const gifUrl = data?.data?.images.downsized_large.url;
       setGif(gifUrl);
@@ -60,7 +62,7 @@ const useGif = (tag) => {
       files: [file],
     }
     if(navigator.canShare && navigator.canShare(shareData)){
-      setShareSupport(true);
+      setShareSupport(false);
     }
     else{
       setShareSupport(false);
@@ -68,7 +70,7 @@ const useGif = (tag) => {
   }
   
   async function shareHandler(){
-    const rawImage = await fetch(gif);
+    const rawImage = await fetch(shareURL);
     const blobImage = await rawImage.blob();
     
     const file = new File( [blobImage], 
@@ -78,12 +80,12 @@ const useGif = (tag) => {
         lastModified: new Date().getTime()
       }
     )
-
-    const shareData = {
+    
+    const shareData = {  
       title: "GIF-Gen",
       files: [file],
-      // text: "Download Intresting gifs from afnan-gif-generator.netlify.app", 
-      // url: 'afnan-gif-generator.netlify.app',
+      text: "Download Intresting gifs from ", 
+      url: '/',
     }
 
     try{
@@ -95,7 +97,7 @@ const useGif = (tag) => {
       }
     }
     catch(err){
-      console.log("Error nhi hai,, Permission nhi mili...");
+      console.log("Error::" + err);
     }
   }
 
