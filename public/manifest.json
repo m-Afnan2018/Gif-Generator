@@ -3,11 +3,6 @@
   "name": "GIF-Generator",
   "icons": [
     {
-      "src": "favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any"
-    },
-    {
       "src": "16x16.png",
       "type": "image/png",
       "sizes": "16x16"
