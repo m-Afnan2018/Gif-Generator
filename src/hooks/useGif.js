@@ -44,7 +44,24 @@ const useGif = (tag) => {
   }
 
   async function checkShareSupport(){
-    if(navigator.canShare && navigator.canShare()){
+    const rawImage = await fetch(gif);
+    const blobImage = await rawImage.blob();
+    
+    const file = new File( [blobImage], 
+      `${tag}.gif`, 
+      {
+        type: blobImage.type,
+        lastModified: new Date().getTime()
+      }
+    )
+
+    const shareData = {
+      title: "GIF-Gen",
+      files: [file],
+      text: "Download Intresting gifs from afnan-gif-generator.netlify.app", 
+      url: 'afnan-gif-generator.netlify.app',
+    }
+    if(navigator.canShare && navigator.canShare(shareData)){
       setShareSupport(true);
     }
     else{
