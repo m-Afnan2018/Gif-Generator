@@ -15,8 +15,8 @@ const useGif = (tag) => {
     setLoader(true);
     const url = tag ? `${random_URL}&tag=${tag}` : random_URL;
     const {data} = await axios.get(url);
-    setShareURL(data?.data?.images.downsized_large?.url);
     if(data?.data?.images){
+      setShareURL(data?.data?.images.downsized_large?.url);
       const gifUrl = data?.data?.images.downsized_large.url;
       setGif(gifUrl);
     }
