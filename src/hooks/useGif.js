@@ -91,7 +91,7 @@ const useGif = (tag) => {
         const blobImage = await rawImage.blob();
         const copyFile = new ClipboardItem({ [blobImage.type] : blobImage});
 
-        // await navigator.clipboard.write([copyFile]);
+        await navigator.clipboard.write([copyFile]);
       } catch(e) {
         console.error('Error while copying code', e);
       }

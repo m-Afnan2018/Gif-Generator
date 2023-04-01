@@ -5,7 +5,7 @@ import useGif from '../hooks/useGif';
 const Search = () => {
   const [search, setSearch] = useState('Cute Cats');
 
-  const {generate, loader, gif, downloadHandler, shareHandler, shareSupport, copyHandler} = useGif(search);
+  const {generate, loader, gif, downloadHandler, shareHandler, shareSupport} = useGif(search);
   
   function generateHandler(){
     generate();
