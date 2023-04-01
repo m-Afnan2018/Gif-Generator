@@ -45,8 +45,8 @@ const useGif = (tag) => {
     window.URL.revokeObjectURL(href);
   }
 
+  /* eslint-disable  no-unused-vars */
   async function checkShareSupport(){
-    /* eslint-disable  no-unused-vars */
     const rawImage = await fetch(gif);
     const blobImage = await rawImage.blob();
     
