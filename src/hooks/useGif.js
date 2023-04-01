@@ -58,8 +58,8 @@ const useGif = (tag) => {
     const shareData = {
       title: "GIF-Gen",
       files: [file],
-      text: "Download Intresting gifs from afnan-gif-generator.netlify.app", 
-      url: 'afnan-gif-generator.netlify.app',
+      // text: "Download Intresting gifs from afnan-gif-generator.netlify.app", 
+      // url: 'afnan-gif-generator.netlify.app',
     }
     if(navigator.canShare && navigator.canShare(shareData)){
       setShareSupport(true);
