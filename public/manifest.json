@@ -78,6 +78,12 @@
       "sizes": "180x180"
     },
     {
+      "src": "192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose":"maskable"
+    },
+    {
       "src": "512x512.png",
       "type": "image/png",
       "sizes": "any",
